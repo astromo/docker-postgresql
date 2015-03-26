@@ -104,7 +104,7 @@ COPY users (id, email, password, first_name, last_name, created_at, updated_at) 
 \.
 
 COPY users (id, email, password, first_name, last_name, created_at, updated_at) FROM stdin;
-1   michiel@astromo.io   $2a$13$yXsGSa9oXlQJfv/voXFgieMlirIFGEyl/xmKSCa2m9tfScZt9o.8y    Michiel  De Mey  2015-03-25 00:00:00+01  2015-03-25 00:00:00+01
+2   michiel@astromo.io   $2a$13$yXsGSa9oXlQJfv/voXFgieMlirIFGEyl/xmKSCa2m9tfScZt9o.8y    Michiel  De Mey  2015-03-25 00:00:00+01  2015-03-25 00:00:00+01
 \.
 
 
