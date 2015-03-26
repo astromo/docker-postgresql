@@ -1,4 +1,4 @@
-# docker-postgresql
+# Astromo's PostgreSQL Docker Container
 PostgreSQL Docker container
 
 ## Build the container
