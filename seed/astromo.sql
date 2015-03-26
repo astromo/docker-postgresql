@@ -103,6 +103,10 @@ COPY users (id, email, password, first_name, last_name, created_at, updated_at) 
 1	gilles@astromo.io	$2a$13$dlsWYjpGXbAZAOXpBA4bgeCnYbSQYu8SZ9Am4NyVJfJds3MBz1zJm	Gilles	De Mey	2015-03-25 00:00:00+01	2015-03-25 00:00:00+01
 \.
 
+COPY users (id, email, password, first_name, last_name, created_at, updated_at) FROM stdin;
+1   michiel@astromo.io   $2a$13$yXsGSa9oXlQJfv/voXFgieMlirIFGEyl/xmKSCa2m9tfScZt9o.8y    Michiel  De Mey  2015-03-25 00:00:00+01  2015-03-25 00:00:00+01
+\.
+
 
 --
 -- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: astromo
