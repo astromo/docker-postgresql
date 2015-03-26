@@ -100,11 +100,8 @@ ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regcl
 --
 
 COPY users (id, email, password, first_name, last_name, created_at, updated_at) FROM stdin;
-1	gilles@astromo.io	$2a$13$dlsWYjpGXbAZAOXpBA4bgeCnYbSQYu8SZ9Am4NyVJfJds3MBz1zJm	Gilles	De Mey	2015-03-25 00:00:00+01	2015-03-25 00:00:00+01
-\.
-
-COPY users (id, email, password, first_name, last_name, created_at, updated_at) FROM stdin;
-2   michiel@astromo.io   $2a$13$yXsGSa9oXlQJfv/voXFgieMlirIFGEyl/xmKSCa2m9tfScZt9o.8y    Michiel  De Mey  2015-03-25 00:00:00+01  2015-03-25 00:00:00+01
+1	gilles@astromo.io	$2a$13$Log65GBcbaP9TwfOFq0.5OPWBmMcBYAHGKSeiKNZGdZZ.N4G93qP2	Gilles	De Mey	2015-03-26 00:00:00+01	2015-03-26 00:00:00+01
+2	michiel@astromo.io	$2a$13$j4g3Oh4SLgB9Rhz9mKVXROD3cJYka6B1.msYtJfPkMYsVn/SD9PXW	Michiel	De Mey	2015-03-26 00:00:00+01	2015-03-26 00:00:00+01
 \.
 
 
@@ -112,7 +109,7 @@ COPY users (id, email, password, first_name, last_name, created_at, updated_at) 
 -- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: astromo
 --
 
-SELECT pg_catalog.setval('users_id_seq', 1, true);
+SELECT pg_catalog.setval('users_id_seq', 4, true);
 
 
 --
@@ -132,11 +129,12 @@ ALTER TABLE ONLY users
 
 
 --
--- Name: public; Type: ACL; Schema: -; Owner: astromo
+-- Name: public; Type: ACL; Schema: -; Owner: gillesdemey
 --
 
 REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM astromo;
+REVOKE ALL ON SCHEMA public FROM gillesdemey;
+GRANT ALL ON SCHEMA public TO gillesdemey;
 GRANT ALL ON SCHEMA public TO astromo;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
